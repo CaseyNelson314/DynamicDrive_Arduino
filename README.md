@@ -41,7 +41,7 @@
 
 - `DynamicDriver(const Vcc &vcc, T... gnd)`
 
-  DynamicDriver のオブジェクトを作成します
+  DynamicDriver のオブジェクトを作成
 
   - vcc : Vcc 構造体の実体
   - gnd : GND ピン(桁数分)
