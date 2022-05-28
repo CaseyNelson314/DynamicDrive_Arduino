@@ -117,6 +117,7 @@ class DynamicDriver {
     for (uint8_t i = 0; i < 8; i++)
       digitalWrite(vcc[i], bitRead(patternMap[num], i));
     delayMicroseconds(10);
-    for (uint8_t i = 0; i < 8; i++) digitalWrite(vcc[i], LOW);
+    for (uint8_t i = 0; i < 8; i++)
+      digitalWrite(vcc[i], LOW);
   }
 };
