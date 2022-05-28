@@ -46,7 +46,7 @@
   - vcc : Vcc 構造体の実体
   - gnd : GND ピン(桁数分)
 
-- `show(double num)`
+- `show(uint32_t num)`
 
   整数値を出力
 
