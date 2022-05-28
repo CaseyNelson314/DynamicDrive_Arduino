@@ -37,7 +37,7 @@
   led.show(1234);
   ```
 
-## FUnctions
+## Functions
 
 - `DynamicDriver(const Vcc &vcc, T... gnd)`
 
