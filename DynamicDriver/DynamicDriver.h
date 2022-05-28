@@ -70,7 +70,7 @@ class DynamicDriver {
   void show(double num, uint8_t maxDecimalDigit = 1) {
     show(static_cast<uint32_t>(floor(num * pow(10, maxDecimalDigit))));
     if (maxDecimalDigit == 0) return;
-    digitalWrite(gnd[maxDecimalDigit], LOW);
+    digitalWrite(gnd[maxDecimalDigit], LOW);  //小数点表示
     digitalWrite(vcc[7], HIGH);
     delayMicroseconds(10);
     digitalWrite(vcc[7], LOW);
@@ -92,9 +92,9 @@ class DynamicDriver {
   void demo() { show(millis() % static_cast<uint32_t>(pow(10, digitCount))); }
 
  private:
+  const uint8_t digitCount;
   uint8_t vcc[8];
   uint8_t *gnd;
-  uint8_t digitCount;
 
   /**
    * @brief 1文字出力
