@@ -30,7 +30,7 @@ class DynamicDriver {
   template <typename... T>
   DynamicDriver(const Vcc &vcc, T... gnd) : digitCount(sizeof...(gnd)) {
     this->gnd = new uint8_t[digitCount];
-    const uint8_t gndList[] = {static_cast<uint8_t>(gnd)...};
+    const uint8_t gndList[] = {static_cast<uint8_t>(gnd)...};  //念のためキャスト
     memcpy(this->gnd, gndList, digitCount);
 
     this->vcc[0] = vcc.a;
@@ -92,9 +92,9 @@ class DynamicDriver {
   void demo() { show(millis() % static_cast<uint32_t>(pow(10, digitCount))); }
 
  private:
-  uint8_t vcc[8];      // Vcc vcc
-  uint8_t *gnd;        // GND vcc
-  uint8_t digitCount;  // digit num
+  uint8_t vcc[8];
+  uint8_t *gnd;
+  uint8_t digitCount;
 
   /**
    * @brief 1文字出力
