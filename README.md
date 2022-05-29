@@ -2,22 +2,15 @@
 
 ## Usage
 
-- ピン番号は以下のフォーマットでセット
-
-  ```cpp
-  |--d--|
-  c     e
-  |--g--|
-  b     f
-  |--a--| .h
-  ```
-
 - Vcc ピンは Vcc 構造体にセット
 
   ```cpp
   //a, b, c, d, e, f, g, hの順で
   DynamicDriver::Vcc vcc = {7, 6, 3, 4, 5, 8, 2, 9};
   ```
+- ピン番号は以下のフォーマット
+
+  <img height=200 src="https://user-images.githubusercontent.com/91818705/170850625-cc4a0105-8c0d-46ca-a28e-d3dd373ad85f.png">
 
 - 実体作成後、コンストラクタの引数に実体、GNDピン(下桁から)、セット
 
