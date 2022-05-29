@@ -1,5 +1,11 @@
 # DynamicDriver
 
+### ダイナミック制御を行うクラス
+
+- 動作例
+
+  ![A2542_I2](https://user-images.githubusercontent.com/91818705/170850975-eebcd7bd-d813-4c47-b9d0-89223f45d978.jpg)
+
 ## Usage
 
 - Vcc ピンは Vcc 構造体にセット
