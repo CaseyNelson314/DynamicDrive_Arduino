@@ -68,7 +68,7 @@ class DynamicDriver {
    * @param maxDecimalDigit 表示する小数点の桁
    */
   void show(double num, uint8_t maxDecimalDigit = 1) {
-    show(static_cast<uint32_t>(floor(num * pow(10, maxDecimalDigit))));
+    show(static_cast<uint32_t>(num * pow(10, maxDecimalDigit)));
     if (maxDecimalDigit == 0) return;
     digitalWrite(gnd[maxDecimalDigit], LOW);  //小数点表示
     digitalWrite(vcc[7], HIGH);
