@@ -8,27 +8,20 @@
 
 ## Usage
 
-- Vcc ピンは Vcc 構造体にセット
+- Vcc ピンを Vcc 構造体にセット後、コンストラクタの引数に実体、GNDピン(下桁から)、セット
 
   ```cpp
-  //a, b, c, d, e, f, g, hの順で
+  //                        a, b, c, d, e, f, g, h
+  //                        ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓
   DynamicDriver::Vcc vcc = {7, 6, 3, 4, 5, 8, 2, 9};
+  DynamicDriver led(vcc, 13, 12, 11, 10);
+  
+  //DynamicDriver led({7, 6, 3, 4, 5, 8, 2, 9}, 13, 12, 11, 10);  //this is ok
+  
   ```
 - ピン番号は以下のフォーマット
 
   <img height=200 src="https://user-images.githubusercontent.com/91818705/170850625-cc4a0105-8c0d-46ca-a28e-d3dd373ad85f.png">
-
-- 実体作成後、コンストラクタの引数に実体、GNDピン(下桁から)、セット
-
-  ```cpp
-  DynamicDriver led(vcc, 13, 12, 11, 10);
-  ```
-
-- 以下のようにセットすることもできます
-
-  ```cpp
-  DynamicDriver led({7, 6, 3, 4, 5, 8, 2, 9}, 13, 12, 11, 10);
-  ```
 
 - 数字を表示
 
