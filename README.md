@@ -11,12 +11,12 @@
 - コンストラクタの引数にVcc構造体実体、GNDピン(下桁から)をセット
 
   ```cpp
-  //                        a, b, c, d, e, f, g, h
+  //                        a  b  c  d  e  f  g  h
   //                        ↓  ↓  ↓  ↓  ↓  ↓  ↓  ↓
   DynamicDriver::Vcc vcc = {7, 6, 3, 4, 5, 8, 2, 9};  // set Vcc pins assing
   DynamicDriver led(vcc, 13, 12, 11, 10);             // set Vcc structure and GND pins assing
   
-  //Other method
+  //Other
   //DynamicDriver led({7, 6, 3, 4, 5, 8, 2, 9}, 13, 12, 11, 10);
   
   ```
